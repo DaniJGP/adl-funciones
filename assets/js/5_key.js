@@ -7,18 +7,24 @@ function createDiv(color = 'white') {
     newDiv.style.border = '1px solid black';
 }
 
-function colorDiv(color = 'white') {
+function colorDiv(element, color = 'white') {
     document.getElementById('key').style.background = color;
 }
 
-document.addEventListener('keydown', function (e) {
+let divColor = '';
+const keyDiv = document.getElementById('key');
+
+document.addEventListener('keydown', (e) => {
     const pressedKey = e.key.toLowerCase();
     if (pressedKey === 'a') {
-        colorDiv('pink');
+        divColor = 'pink';
+        colorDiv(keyDiv, divColor);
     } else if (pressedKey === 's') {
-        colorDiv('orange');
+        divColor = 'orange';
+        colorDiv(keyDiv, divColor);
     } else if (pressedKey === 'd') {
-        colorDiv('skyblue');
+        divColor = 'skyblue';
+        colorDiv(keyDiv, divColor);
     } else if (pressedKey === 'q') {
         createDiv('purple');
     } else if (pressedKey === 'w') {
