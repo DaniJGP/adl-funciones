@@ -8,7 +8,7 @@ function createDiv(color = 'white') {
 }
 
 function colorDiv(element, color = 'white') {
-    document.getElementById('key').style.background = color;
+    element.style.background = color;
 }
 
 let divColor = '';
